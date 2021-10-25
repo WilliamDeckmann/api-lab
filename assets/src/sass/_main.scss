@@ -1,0 +1,55 @@
+.Wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.Main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    &__description {
+        font-size: $font-size_lg;
+    }
+
+    &__title {
+        font-size: $font-size_xl;
+    }
+}
+
+.Container {
+    padding: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+
+    &__text {
+        min-width: 600px;
+        text-align: center;
+        font-size: $font-size_md;
+    }
+}
+
+.Button {
+    width: 150px;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background: none;
+
+    &__text {
+        text-align: center;
+        font-size: $font-size_sm;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+}

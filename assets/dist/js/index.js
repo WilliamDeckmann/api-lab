@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".Button"),t=document.querySelector(".Container__text"),o=["joke 1","joke 2","joke 3","joke 4","joke 5"];e.addEventListener("click",()=>{t.textContent=o[Math.floor(Math.random()*o.length)]})});
