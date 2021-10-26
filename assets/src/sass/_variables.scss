@@ -1,6 +1,11 @@
-/* Variables */
+/* Font-size */
 $font-size: 16px;
 $font-size_sm: $font-size * 0.75;
 $font-size_md: $font-size * 1;
 $font-size_lg: $font-size * 1.25;
 $font-size_xl: $font-size * 1.5;
+
+/* Colors */
+$dark: black !default;
+$light: white !default;
+$red: rgb(255, 114, 114) !default;
