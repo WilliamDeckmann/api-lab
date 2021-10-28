@@ -1,0 +1,83 @@
+/* Style */
+.Wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.Main {
+    height: 100vh;
+    margin: 0 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.Title {
+    font-size: $font-size_xl * 2;
+    font-weight: bolder;
+}
+
+.List {
+    border: 1px solid $dark;
+    border-bottom: none;
+
+    &__item {
+        width: 800px;
+        border-bottom: 1px solid $dark;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__remove {
+        width: 800px;
+        padding: 25px;
+        background-color: $red;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        text-align: end;
+        cursor: pointer;
+
+        &:hover {
+            background: darken($red, 10%)
+        }
+    }
+
+    &__save {
+        width: 650px;
+        padding: 25px;
+        position: absolute;
+        top: 0;
+        background-color: $green;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        text-align: end;
+        cursor: pointer;
+
+        &:hover {
+            background: darken($green, 10%)
+        }
+    }
+
+    &__title {
+        width: 800px;
+        padding: 25px;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        background-color: $light;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        cursor: grab;
+        transition: left .5s ease-in-out;
+
+        &:hover {
+            background: darken($light, 10%)
+        }
+    }
+
+    &__text {
+        font-size: $font-size_xl;
+    }
+}

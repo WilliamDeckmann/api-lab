@@ -19,18 +19,19 @@ function buildJavascript() {
     .pipe(babel({
       presets: ["@babel/preset-env"]
     }))
-    .pipe(dest("assets/src/js/babel"));
+    .pipe(dest("assets/dist/js"));
 };
 
+/*
 function compressJavascript() {
   return src('assets/src/js/babel/*.js')
     .pipe(uglify())
     .pipe(dest('assets/dist/js'))
-};
+}; */
 
 // Watch
 function watchTask() {
-  watch(['*.html', 'assets/src/sass/**/*.scss', 'assets/src/js/*.js', 'assets/src/js/babel/*.js'], series(buildStyles, buildJavascript, compressJavascript))
+  watch(['*.html', 'assets/src/sass/**/*.scss', 'assets/src/js/*.js', 'assets/src/js/babel/*.js'], series(buildStyles, buildJavascript))
 };
 
-exports.default = series(buildStyles, buildJavascript, compressJavascript, watchTask)
+exports.default = series(buildStyles, buildJavascript, watchTask)

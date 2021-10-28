@@ -1,1 +1,67 @@
-"use strict";function asyncGeneratorStep(e,n,t,r,o,c,a){try{var s=e[c](a),u=s.value}catch(e){return void t(e)}s.done?n(u):Promise.resolve(u).then(r,o)}function _asyncToGenerator(s){return function(){var e=this,a=arguments;return new Promise(function(n,t){var r=s.apply(e,a);function o(e){asyncGeneratorStep(r,n,t,o,c,"next",e)}function c(e){asyncGeneratorStep(r,n,t,o,c,"throw",e)}o(void 0)})}}function myFetch(){return _myFetch.apply(this,arguments)}function _myFetch(){return(_myFetch=_asyncToGenerator(regeneratorRuntime.mark(function e(){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,fetch("https://icanhazdadjoke.com/",{headers:{Accept:"application/json"}});case 2:return n=e.sent,e.next=5,n.json();case 5:return n=e.sent,e.abrupt("return",n);case 7:case"end":return e.stop()}},e)}))).apply(this,arguments)}myFetch().then(function(e){console.log(e.joke)});
+"use strict";
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+// API test with Axios
+console.log("List of API data"); // Make asynchronous API fetch
+
+function myFetch() {
+  return _myFetch.apply(this, arguments);
+} // Filler space
+
+
+function _myFetch() {
+  _myFetch = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var response, data;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch("https://icanhazdadjoke.com/", {
+              headers: {
+                Accept: "application/json"
+              }
+            });
+
+          case 2:
+            response = _context.sent;
+            _context.next = 5;
+            return response.json();
+
+          case 5:
+            data = _context.sent;
+            return _context.abrupt("return", data);
+
+          case 7:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _myFetch.apply(this, arguments);
+}
+
+console.log("...");
+console.log("...");
+console.log("..."); // Use fetched API data
+
+myFetch().then(function (data) {
+  console.log("icanhazdadjoke:");
+  console.log(data.joke);
+}); // Fetch API
+
+var icanhaz = "https://icanhazdadjoke.com/";
+fetch(icanhaz, {
+  headers: {
+    Accept: "application/json"
+  }
+}).then(function (response) {
+  return response.json();
+}).then(function (data) {
+  console.log("Fetch:");
+  console.log(data.joke);
+});

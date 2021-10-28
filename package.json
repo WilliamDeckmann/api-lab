@@ -16,7 +16,9 @@
     "url": "https://github.com/WilliamDeckmann/api-lab/issues"
   },
   "homepage": "https://github.com/WilliamDeckmann/api-lab#readme",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",

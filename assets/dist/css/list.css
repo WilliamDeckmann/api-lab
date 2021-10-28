@@ -1,0 +1,120 @@
+/* Import */
+/* Resets */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+figure {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Font-size */
+/* Colors */
+/* Style */
+.Wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.Main {
+  height: 100vh;
+  margin: 0 100px 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.Title {
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+.List {
+  border: 1px solid black;
+  border-bottom: none;
+}
+.List__item {
+  width: 800px;
+  border-bottom: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+.List__remove {
+  width: 800px;
+  padding: 25px;
+  background-color: #ff7272;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  text-align: end;
+  cursor: pointer;
+}
+.List__remove:hover {
+  background: #ff3f3f;
+}
+.List__save {
+  width: 650px;
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  background-color: #72ff9c;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  text-align: end;
+  cursor: pointer;
+}
+.List__save:hover {
+  background: #3fff78;
+}
+.List__title {
+  width: 800px;
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background-color: white;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  cursor: grab;
+  transition: left 0.5s ease-in-out;
+}
+.List__title:hover {
+  background: #e6e6e6;
+}
+.List__text {
+  font-size: 24px;
+}
