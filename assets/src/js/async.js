@@ -1,5 +1,5 @@
 // API test with Axios
-console.log("List of API data")
+console.log("Async vs Fetch")
 
 // Make asynchronous API fetch
 async function myFetch() {
@@ -20,7 +20,7 @@ console.log("...")
 
 // Use fetched API data
 myFetch().then(data => {
-    console.log("icanhazdadjoke:")
+    console.log("Async:")
     console.log(data.joke)
 });
 

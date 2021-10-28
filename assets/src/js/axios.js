@@ -1,5 +1,5 @@
 // icanhazdadjoke
-let ican = "https://icanhazdadjoke.com/";
+let ican = "https://icanhazdadjoke.com";
 axios.get(ican)
     .then(response => {
         console.log("icanhazdadjoke");
@@ -11,8 +11,6 @@ axios.get(ican)
     .then(function() {
         // always executed
     });
-
-
 
 // Pokeapi
 let poke = "https://pokeapi.co/api/v2/pokemon/ditto";

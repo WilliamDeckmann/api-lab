@@ -1,7 +1,7 @@
 "use strict";
 
 // icanhazdadjoke
-var ican = "https://icanhazdadjoke.com/";
+var ican = "https://icanhazdadjoke.com";
 axios.get(ican).then(function (response) {
   console.log("icanhazdadjoke");
   console.log(response);

@@ -64,18 +64,39 @@ ul {
   font-weight: bolder;
 }
 
-.List {
+.Remove-all {
+  padding: 25px;
   border: 1px solid black;
-  border-bottom: none;
+  background-color: #ff7272;
+  font-size: 24px;
+}
+.Remove-all:hover {
+  background: #ff3f3f;
+}
+
+.List {
+  min-height: 39px;
+  width: 800px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.List__empty {
+  padding: 10px;
+  position: absolute;
+  align-self: center;
 }
 .List__item {
-  width: 800px;
+  width: 100%;
   border-bottom: 1px solid black;
   position: relative;
   overflow: hidden;
 }
+.List__item:last-child {
+  border-bottom: none;
+}
 .List__remove {
-  width: 800px;
+  width: 100%;
   padding: 25px;
   background-color: #ff7272;
   grid-column: 1/4;
@@ -87,7 +108,7 @@ ul {
   background: #ff3f3f;
 }
 .List__save {
-  width: 650px;
+  width: calc(100% - 150px);
   padding: 25px;
   position: absolute;
   top: 0;
@@ -101,7 +122,7 @@ ul {
   background: #3fff78;
 }
 .List__title {
-  width: 800px;
+  width: 100%;
   padding: 25px;
   position: absolute;
   top: 0;

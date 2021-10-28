@@ -16,22 +16,46 @@
 
 .Title {
     font-size: $font-size_xl * 2;
-    font-weight: bolder;
+        font-weight: bolder;
+}
+
+.Remove-all {
+    padding: 25px;
+    border: 1px solid $dark;
+    background-color: $red;
+    font-size: $font-size_xl;
+
+    &:hover {
+        background: darken($red, 10%)
+    }
 }
 
 .List {
+    min-height: 39px;
+    width: 800px;
     border: 1px solid $dark;
-    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+
+    &__empty {
+        padding: 10px;
+        position: absolute;
+        align-self: center;
+    }
 
     &__item {
-        width: 800px;
+        width: 100%;
         border-bottom: 1px solid $dark;
         position: relative;
         overflow: hidden;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 
     &__remove {
-        width: 800px;
+        width: 100%;
         padding: 25px;
         background-color: $red;
         grid-column: 1 / 4;
@@ -45,7 +69,7 @@
     }
 
     &__save {
-        width: 650px;
+        width: calc(100% - 150px);
         padding: 25px;
         position: absolute;
         top: 0;
@@ -61,7 +85,7 @@
     }
 
     &__title {
-        width: 800px;
+        width: 100%;
         padding: 25px;
         position: absolute;
         top: 0;

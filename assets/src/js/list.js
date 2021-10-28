@@ -1,16 +1,20 @@
 // Element variables
 const list = document.querySelector(".List");
+const button = document.querySelector(".Remove-all");
 
 // Array variables
 let itemArray = [];
 
 // Loop
-for(let i = 1; i <= 3; i++) {       
+for(let i = 1; i <= 5; i++) {       
     let star = `https://swapi.dev/api/people/${i}`;
     axios.get(star)
         .then(response => {
-            let data = response.data;
+            var data = response.data;
             itemArray.push(data.name);
+            console.log(data.name);
+            
+
 
             // Create: item
             let item = document.createElement("li");
@@ -63,5 +67,61 @@ for(let i = 1; i <= 3; i++) {
             remove.addEventListener("click", () => {
                 item.remove();
             });
+
+            // Remove all
+            button.addEventListener("click", () => {
+                item.remove();
+            });
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+        .then(function() {
+            //...
         });
 };
+
+
+
+// Log the item array
+console.log("Item array:");
+console.log(itemArray);
+
+// For each test
+itemArray.forEach(element => {
+    console.log("hey");
+});
+// For loop test
+for(let i = 0; i < itemArray.length; i++) {
+    console.log("hey");
+}
+
+
+
+// icanhazdadjoke
+let url = "https://icanhazdadjoke.com"; // `https://icanhazdadjoke.com/j/${ joke id }>`
+
+// Axios API
+axios.get(url)
+    .then(response => {
+        console.log("Axios:");
+        console.log(response);
+    })
+    .catch(function(error) {
+        console.log(error);
+    })
+    .then(function() {
+        // always executed
+    });
+
+// Fetch API
+fetch(url, {
+    headers: {
+        Accept: "application/json",
+    },
+})
+    .then((response) => response.json())
+    .then((data) => {
+        console.log("Fetch:")
+        console.log(data)
+    });
